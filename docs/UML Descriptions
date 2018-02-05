@@ -1,0 +1,17 @@
+AppCompatActivity
+The parent class of all other activites.  Includes basic functionality such as onClick(), onCreate(), onStart() etc...  Some of these functionalities are overridden by its children.
+
+MainActivity
+The primary starting activity.  Contains the ListView with the short form of all Subscriptions as well as a button for adding new Subscriptions.  Totaly monthly charges are summed at the bottom of these activity.  Linked to activity_main.xml.
+
+EditActivity
+Serves as the activity screen for both editing and creating new subscriptions.  When in edit mode an existing subscription is passed to it an its values are inserted into the EditView fields.  When it acts as a New Subscription Activity a new blank Subscription is created, passed to the activity and upon finishing the subscriptions is added to the subscription list.
+
+DetailActivity
+Similar in view to EditActivity but has non-editable TextView fields instead of EditViews.  Includes comments that are not displayed in the MainActivity.  Does not return any data when finishing.
+
+Subscription
+A custom class which is the base object for the Subscription List.  Contains three strings (name, date, comment) and a float (charge).  This class has a constructor and getters and setters for each variable.
+
+CustomAdapter
+Extends ArrayAdapter so that is inherits methods such as getView().  The main purpose of this class is to define the layout used in the ListView as to how each member variable will appear.  Contains listerns for its edit and delete buttons as well which creates actions which do as described.
