@@ -126,7 +126,6 @@ public class MainActivity extends AppCompatActivity {
      */
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == 1) {
-            Toast.makeText(this, "test", Toast.LENGTH_SHORT).show();
             Subscription sub = (Subscription)data.getSerializableExtra("sub");
             int position = data.getIntExtra("position", 0);
             subArrayList.set(position, sub);
